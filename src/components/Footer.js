@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
+      {/* <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
           Blah blah 
         </p>
@@ -20,22 +20,24 @@ function Footer() {
             <h2>About</h2>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className='social-media'>
         <div className='social-media-wrap'>
           <Link to='/' className='social-logo'>
-            TRVL <i className='fab fa-typo3' />
+            <i class="fas fa-globe fa-2x"></i>
           </Link>
           <small className='website-rights'>STOLLERSYSTEM 2020</small>
           <div className='social-icons'>
-            <Link
+
+            <a className='social-icon-link' target='_blank' href='https://github.com/StollerSystem'><i class="fab fa-github-square fa-3x"></i></a>
+            {/* <Link
               className='social-icon-link'
-              to='/'
+              to='https://github.com/StollerSystem'
               target='_blank'
               aria-label=''
             >
-              <i className='fab fa-facebook-f' />
-            </Link>
+              <i class="fab fa-github-square fa-3x"></i>              
+            </Link> */}
           </div>
         </div>
       </section>

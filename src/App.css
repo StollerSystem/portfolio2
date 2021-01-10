@@ -10,8 +10,8 @@
 }
 
 .home,
-.services,
-.products,
+.projects,
+.about,
 .sign-up {
   display: flex;
   height: 90vh;
@@ -20,8 +20,8 @@
   font-size: 3rem;
 }
 
-.services {
-  background-image: url('');
+.projects {
+  background-image: url('https://sdo.gsfc.nasa.gov/assets/img/browse/2020/07/20/20200720_001311_4096_304211171.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   font-size: 100px;
 }
 
-.products {
+.about {
   background-image: url('');
   background-position: center;
   background-size: fill;

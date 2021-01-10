@@ -9,7 +9,7 @@ function HeroSection() {
       <h1>STOLLERSYSTEM</h1>
       <p>works by ben stoller</p>
       <div className='hero-btns'>
-        <Button 
+        {/* <Button 
         className='btns'
         buttonStyle='btn--outline'
         buttonSize='btn--large'
@@ -22,7 +22,7 @@ function HeroSection() {
         buttonSize='btn--large'
         >
           WATCH TRAILER <i className='far fa-play-circle' />
-        </Button>
+        </Button> */}
       </div>
     </div>
   )
