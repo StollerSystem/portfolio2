@@ -31,6 +31,8 @@ h1 {
   display: flex;
   flex: 1;
   margin: 0 1rem;
+  border: solid white;
+  border-width: 1px;
   border-radius: 10px;
 }
 
@@ -38,8 +40,8 @@ h1 {
   display: flex;
   flex-flow: column;
   width: 100%;
-  box-shadow: 0 6px 20px rgba(56, 126, 255, 0.379);
-  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  box-shadow: 0 0 15px rgba(255, 223, 93, 0.838);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(255, 222, 56, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   border-radius: 10px;
   overflow: hidden;
@@ -96,7 +98,7 @@ h1 {
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #ffffff;
   font-size: 18px;
   line-height: 24px;
 }

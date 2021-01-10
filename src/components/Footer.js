@@ -24,11 +24,10 @@ function Footer() {
       <section className='social-media'>
         <div className='social-media-wrap'>
           <Link to='/' className='social-logo'>
-            <i class="fas fa-globe fa-2x"></i>
+            STOLLERSYSTEM<i class="fas fa-globe fa-2x"></i>
           </Link>
           <small className='website-rights'>STOLLERSYSTEM 2020</small>
           <div className='social-icons'>
-
             <a className='social-icon-link' target='_blank' href='https://github.com/StollerSystem'><i class="fab fa-github-square fa-3x"></i></a>
             {/* <Link
               className='social-icon-link'
