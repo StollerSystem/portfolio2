@@ -31,16 +31,16 @@
 }
 
 .about {
-  background-image: url('');
+  background-image: url('https://sdo.gsfc.nasa.gov/assets/img/browse/2020/07/20/20200720_003830_4096_0304.jpg');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
 }
 
 .sign-up {
-  background-image: url('');
+  background-image: url('https://sdo.gsfc.nasa.gov/assets/img/browse/2020/07/20/20200720_021753_4096_0193.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

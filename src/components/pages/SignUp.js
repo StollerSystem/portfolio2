@@ -3,6 +3,6 @@ import '../../App.css';
 
 export default function SignUp() {
   return (
-    <h1 className='sign-up'>SignUp</h1>
+    <h1 className='sign-up'>Contact</h1>
   )
 };

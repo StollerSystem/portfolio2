@@ -8,7 +8,7 @@ function CardItem(props) {
     <>
       <li className='cards__item'>
         <div className='cards__item__link' >
-          <figure className='cards__item__pic-wrap' data-category={props.label}>\
+          <figure className='cards__item__pic-wrap' data-category={props.label}>
             <a target='_blank' href='https://heptagram.vercel.app/'>
               <img src={props.src} alt='Project' className='cards__item__img' />
             </a>
