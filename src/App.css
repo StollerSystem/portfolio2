@@ -48,7 +48,8 @@
 }
 
 .projects {
-  background-image: url('https://sdo.gsfc.nasa.gov/assets/img/browse/2020/07/20/20200720_001311_4096_304211171.jpg');
+  /* background-image: url('https://sdo.gsfc.nasa.gov/assets/img/browse/2020/07/20/20200720_001311_4096_304211171.jpg'); */
+  background-image: url('/src/images/BlueSun1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

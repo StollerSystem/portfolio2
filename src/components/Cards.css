@@ -6,6 +6,7 @@
 }
 
 h1 {
+  margin-top: 25px;
   text-align: center;
   font-family: 'Sarpanch', sans-serif;
 }
@@ -42,7 +43,7 @@ h1 {
   display: flex;
   flex-flow: column;
   width: 100%;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.838);
+  box-shadow: 0 0 15px rgba(145, 145, 145, 0.838);
   -webkit-filter: drop-shadow(0 6px 20px rgba(255, 222, 56, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   border-radius: 10px;

@@ -26,9 +26,10 @@ function Footer() {
           <Link to='/' className='social-logo'>
             STOLLERSYSTEM<i class="fas fa-globe fa-2x"></i>
           </Link>
-          <small className='website-rights'>STOLLERSYSTEM 2020</small>
+          <small className='website-rights'>ⓒ 2021</small>
           <div className='social-icons'>
             <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://github.com/StollerSystem'><i class="fab fa-github-square fa-3x"></i></a>
+            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://www.linkedin.com/in/ben-stoller/'><i class="fab fa-linkedin fa-3x"></i></a>
             {/* <Link
               className='social-icon-link'
               to='https://github.com/StollerSystem'
