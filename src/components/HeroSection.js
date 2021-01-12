@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Button } from './Button';
 import './HeroSection.css'
+import { Link as Scroll } from 'react-scroll';
 
 function HeroSection() {
   return (
@@ -23,6 +24,9 @@ function HeroSection() {
         >
           WATCH TRAILER <i className='far fa-play-circle' />
         </Button> */}
+        <Scroll to='cards' smooth='true'>
+          <i class="fas fa-chevron-down fa-3x"></i>
+        </Scroll>
       </div>
     </div>
   )

@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 // import { Button } from './Button';
+import * as Scroll from 'react-scroll';
 
 
 function Navbar() {
+
+  var scroll = Scroll.animateScroll;
   
   const [click, setClick] = useState(false);
   // const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
+  const closeMobileMenu = () => {
+    setClick(false);
+    scroll.scrollToTop();
+  }
   // const showButton = () => {
   //   if(window.innerWidth <= 960) {
   //     setButton(false)
