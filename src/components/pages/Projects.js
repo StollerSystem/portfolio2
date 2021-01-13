@@ -7,14 +7,14 @@ import { Link as Scroll } from 'react-scroll';
 export default function Projects() {
   return (
     <>
-    <div className='projects'>
-      <h1 >PROJECTS</h1>
-      <div className='projects-btns'>
-        <Scroll to='cards' smooth='true'>
-          <i class="fas fa-chevron-down fa-3x"></i>
-        </Scroll>
+      <div className='projects'>
+        <h1 >PROJECTS</h1>
+        <div className='projects-btns'>
+          <Scroll to='cards' smooth='true'>
+            <i class="fas fa-chevron-down fa-3x"></i>
+          </Scroll>
+        </div>
       </div>
-    </div>
       <ProjectCards />
     </>
   )
