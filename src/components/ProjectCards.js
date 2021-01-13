@@ -32,13 +32,13 @@ function ProjectCards() {
           </ul>
           <br></br>
           <ul className='cards__items'>
-            <CardItem
+            {/* <CardItem
               src='/images/'
               text=''
               label=''
               live=''
               repo=''
-            />
+            /> */}
 
           </ul>
         </div>
