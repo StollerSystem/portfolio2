@@ -26,7 +26,7 @@ function HeroSection() {
           WATCH TRAILER <i className='far fa-play-circle' />
         </Button> */}
         <Scroll to='cards' smooth='true'>
-          <i class="fas fa-chevron-down fa-3x"></i>
+          <i className="fas fa-chevron-down fa-3x"></i>
         </Scroll>
       </div>
     </div>

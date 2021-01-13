@@ -11,7 +11,7 @@ export default function Projects() {
         <h1 >PROJECTS</h1>
         <div className='projects-btns'>
           <Scroll to='cards' smooth='true'>
-            <i class="fas fa-chevron-down fa-3x"></i>
+            <i className="fas fa-chevron-down fa-3x"></i>
           </Scroll>
         </div>
       </div>

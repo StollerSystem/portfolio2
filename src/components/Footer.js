@@ -1,8 +1,19 @@
 import React from 'react';
 import './Footer.css'
 import { Link } from 'react-router-dom';
+import * as Scroll from 'react-scroll';
+
+
 
 function Footer() {
+
+  var scroll = Scroll.animateScroll;
+
+  const scrollToTop = () => {
+    
+    scroll.scrollToTop();
+  }
+  
   return (
     <div className='footer-container'>
       {/* <section className='footer-subscription'>
@@ -23,21 +34,14 @@ function Footer() {
       </div> */}
       <section className='social-media'>
         <div className='social-media-wrap'>
-          <Link to='/' className='social-logo'>
-            STOLLERSYSTEM<i class="fas fa-globe fa-2x"></i>
+          <Link to='/' className='social-logo' onClick={scrollToTop}>
+            <h5>STOLLERSYSTEM</h5><i className="fas fa-globe fa-1x"></i>
           </Link>
           <small className='website-rights'>ⓒ 2021</small>
           <div className='social-icons'>
-            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://github.com/StollerSystem'><i class="fab fa-github-square fa-3x"></i></a>
-            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://www.linkedin.com/in/ben-stoller/'><i class="fab fa-linkedin fa-3x"></i></a>
-            {/* <Link
-              className='social-icon-link'
-              to='https://github.com/StollerSystem'
-              target='_blank'
-              aria-label=''
-            >
-              <i class="fab fa-github-square fa-3x"></i>              
-            </Link> */}
+            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://github.com/StollerSystem'><i className="fab fa-github-square fa-3x"></i></a>
+            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://www.linkedin.com/in/ben-stoller/'><i className="fab fa-linkedin fa-3x"></i></a>
+            
           </div>
         </div>
       </section>

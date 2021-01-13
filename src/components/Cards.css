@@ -148,3 +148,19 @@ h1 {
     margin-bottom: 2rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+
+  .cards {
+    padding: 2px;
+  }
+
+  .cards__item {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .cards__item__text {
+    font-size: smaller;    
+  }
+}

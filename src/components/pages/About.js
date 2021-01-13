@@ -9,7 +9,7 @@ export default function About() {
         <h1>ABOUT</h1>
         <div className='projects-btns'>
           <Scroll to='about-me' smooth='true'>
-            <i class="fas fa-chevron-down fa-3x"></i>
+            <i className="fas fa-chevron-down fa-3x"></i>
           </Scroll>
         </div>
       </div>
