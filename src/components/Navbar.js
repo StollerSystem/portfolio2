@@ -15,7 +15,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => {
     setClick(false);
-    scroll.scrollToTop();
+    scroll.scrollToTop({smooth:false, duration: 0});
   }
   // const showButton = () => {
   //   if(window.innerWidth <= 960) {
@@ -57,11 +57,11 @@ function Navbar() {
                 About
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
                Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
           {/* {button && <Button buttonStyle='btn--outline'> SIGN UP </Button>} */}
         </div>

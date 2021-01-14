@@ -11,7 +11,7 @@ function Footer() {
 
   const scrollToTop = () => {
     
-    scroll.scrollToTop();
+    scroll.scrollToTop({smooth:false, duration: 0});
   }
   
   return (
@@ -37,11 +37,10 @@ function Footer() {
           <Link to='/' className='social-logo' onClick={scrollToTop}>
             <h5>STOLLERSYSTEM</h5><i className="fas fa-globe fa-1x"></i>
           </Link>
-          <small className='website-rights'>ⓒ 2021</small>
+          <small className='website-rights'>BUILT BY STOLLERSYSTEM ⓒ 2021</small>
           <div className='social-icons'>
             <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://github.com/StollerSystem'><i className="fab fa-github-square fa-3x"></i></a>
-            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://www.linkedin.com/in/ben-stoller/'><i className="fab fa-linkedin fa-3x"></i></a>
-            
+            <a className='social-icon-link' target='_blank'  rel="noreferrer"  href='https://www.linkedin.com/in/ben-stoller/'><i className="fab fa-linkedin fa-3x"></i></a>            
           </div>
         </div>
       </section>

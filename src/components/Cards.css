@@ -71,10 +71,11 @@ h1 {
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   background-color: #1f98f4;
   box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .cards__item__img {
@@ -108,7 +109,9 @@ h1 {
 .cards__item__text {
   color: #ffffff;
   font-size: 18px;
-  line-height: 24px;
+  /* line-height: 24px; */
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 300;
 }
 
 .cards__item__buttons {
