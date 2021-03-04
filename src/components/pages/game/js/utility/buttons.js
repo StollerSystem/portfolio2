@@ -22,7 +22,7 @@ export default function MobileButton(g, rad, key, code, x, y) {
     g.strokeWeight(1)
     g.fill('rgba(255,255,255,.05)')
     g.ellipse(0,0,this.r,this.r)
-    if (this.keyCode != 32) {
+    if (this.keyCode !== 32) {
       g.push();
       g.rotate(this.rad)
       g.stroke('rgba(255,255,255,.3)')

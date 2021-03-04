@@ -1,6 +1,6 @@
 export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
 
-  var windowWidth = windowWidth;
+  // var windowWidth = windowWidth;
   var size = 30 * (windowWidth / 1800);
   var padding = 10 * (windowWidth / 1800);
   var r = 9 * (windowWidth / 1800);
@@ -58,9 +58,9 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
       g.text("PRESS <ENTER>", (windowWidth/2), g.height / 1.1);
       g.pop();
 
-      var x = windowWidth / 2 - ((padding)*scoreString.length);
-      var y = g.height / 1.55 - (size * 1.55);
-      var digitPos = g.createVector(x, y);
+      let x = windowWidth / 2 - ((padding)*scoreString.length);
+      let y = g.height / 1.55 - (size * 1.55);
+      let digitPos = g.createVector(x, y);
       for (var i = 0; i < scoreString.length; i++) {
         var dmap = digitMaps[scoreString.charAt(i)];
         drawDigit(dmap, i, digitPos);
@@ -68,8 +68,8 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
       }
     } else {
       drawLaserCharge(state);
-      for (var i = 0; i < scoreString.length; i++) {
-        var dmap = digitMaps[scoreString.charAt(i)];
+      for (let i = 0; i < scoreString.length; i++) {
+        let dmap = digitMaps[scoreString.charAt(i)];
         drawDigit(dmap, i, digitPos);
         digitPos.x += size + padding;
       }

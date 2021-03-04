@@ -13,7 +13,7 @@ export default function Enemy(state, r, g, color1, color2) {
     g.createVector(g.random(g.width), g.height + r),
     g.createVector(-r, g.random(g.height))
   ]
-  var r = r;
+  // var r = r;
   var pos = outOfBounds[g.floor(g.random(0, 4))]
   var radius = r*this.w;
   let windowMod = state.windowWidth < 1024 ? .99 : .999;

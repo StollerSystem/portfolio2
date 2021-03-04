@@ -25,6 +25,8 @@ export default function Asteroid(pos, r, size, g, color, windowWidth) {
       this.vel.mult(1.1); break;
     case 0:
       this.vel.mult(1.15); break;
+    default:
+      this.vel.mult(1.05); break;
   }
 
 

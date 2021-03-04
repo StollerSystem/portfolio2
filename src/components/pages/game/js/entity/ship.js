@@ -191,8 +191,8 @@ export default function Ship(state, g) {
       shipVertices[i] = p5.Vector.add(shipVertices[i], this.pos);
     }
     var asteroid_vertices = asteroid.vertices();    
-    for (var i = 0; i < asteroid_vertices.length; i++) {
-      for (var j = 0; j < shipVertices.length; j++) {
+    for (let i = 0; i < asteroid_vertices.length; i++) {
+      for (let j = 0; j < shipVertices.length; j++) {
         var next_i = (i + 1) % asteroid_vertices.length;
         if (lineIntersect(shipVertices[j], shipVertices[(j + 1) % shipVertices.length],
           asteroid_vertices[i], asteroid_vertices[next_i],g)) {           
@@ -272,19 +272,19 @@ export default function Ship(state, g) {
 
       // thruster animations
       if (this.accelMagnitude > 0) {
-        var thrustEnd = g.random(-75 * this.w, -30 * this.w)
+        let thrustEnd = g.random(-75 * this.w, -30 * this.w)
         Thruster(g, state.rgbColor2, this.r - 52 * this.w, this.r - 10 * this.w, this.r - 52 * this.w, -this.r + 10 * this.w, thrustEnd, 0)
       }
       if (this.accelMagnitude < 0) {
-        var thrustEnd = g.random(70 * this.w, 50 * this.w)
+        let thrustEnd = g.random(70 * this.w, 50 * this.w)
         Thruster(g, state.rgbColor2, this.r * 2 - (9 * this.w), this.r / 2 - this.w - 1, this.r * 2.5 - (9 * this.w), this.w + 1, thrustEnd, this.r / 4)
       }
       if (this.rotation > 0) {
-        var thrustEnd = g.random(-25 * this.w, -10 * this.w)
+        let thrustEnd = g.random(-25 * this.w, -10 * this.w)
         Thruster(g, state.rgbColor2, 25 * this.w, -4 * this.w, 30 * this.w, -3 * this.w, 27.5 * this.w, thrustEnd)
       }
       if (this.rotation < 0) {
-        var thrustEnd = g.random(30 * this.w, 10 * this.w)
+        let thrustEnd = g.random(30 * this.w, 10 * this.w)
         Thruster(g, state.rgbColor2, 25 * this.w, this.r / 2 * this.w, 30 * this.w, this.r / 2 * this.w, 27.5 * this.w, thrustEnd)
       }      
       

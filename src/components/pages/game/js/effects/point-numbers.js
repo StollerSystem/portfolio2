@@ -17,7 +17,7 @@ export default function PointNumber(pos, vel, color, g, text, size) {
   }
 
   this.render = function() {
-    let transNum = (.8 * ((this.destroyFrames--) / 1000))    
+    // let transNum = (.8 * ((this.destroyFrames--) / 1000))    
     g.push()
     g.fill(`rgba(255, 255, 255, ${g.random(0, this.transparency)})`)
     g.stroke(`rgba(255, 255, 255, ${this.transparency})`)

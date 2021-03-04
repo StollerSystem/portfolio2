@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../../App.css';
-import ProjectCards from '../ProjectCards';
-import { Link as Scroll } from 'react-scroll';
+// import ProjectCards from '../ProjectCards';
+// import { Link as Scroll } from 'react-scroll';
 // import '../HeroSection.css';
 import { callGame } from './game/game.js';
 
