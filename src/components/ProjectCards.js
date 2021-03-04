@@ -7,14 +7,7 @@ function ProjectCards() {
     <div className='cards'>
       <div className='cards__container'>
         <div className='cards__wrapper'>
-          <ul className='cards__items'>
-            <CardItem
-              src='/images/Heptagram1.jpg'
-              text='Capstone project for Epicodus - Dual Voice Geometric Step Sequencer built using React and Tone.js'
-              label="HEPTAGRAM"
-              live='https://heptagram.vercel.app/'
-              repo='https://github.com/StollerSystem/HEPTAGRAM'
-            />
+          <ul className='cards__items'>            
             <CardItem
               src='/images/Viking1.jpg'
               text='Independent project using React to build a simple website that uses Redux to handle state and components to handle data and views.'

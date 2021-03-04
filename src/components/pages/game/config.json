@@ -1,0 +1,26 @@
+{
+  "gameColors": {
+    "rocks": [255,255,0],
+    "ship": null,
+    "squares": [0,64,225],
+    "enemy": null
+  },
+  "title" : {
+    "text": "STOLLER SYSTEM",
+    "size": "200"
+  },
+  "logo": {
+    "path": "",
+    "x": 670,
+    "y": 40,
+    "size": 4,
+    "color": [155, 52, 235]
+  },
+  "detail": {
+    "text": "",
+    "x": 0,
+    "y": 0,
+    "size": 1,
+    "color": ""
+  }
+}
