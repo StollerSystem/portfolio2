@@ -26,7 +26,7 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
 
     drawLives(state);
 
-    if (state.lives < 4) {
+    if (state.lives < 0) {
 
       g.push();
       g.textFont('Montserrat')
