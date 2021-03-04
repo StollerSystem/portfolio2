@@ -30,7 +30,7 @@ export default function Splash() {
     const centerY = g.height / 2;
     const w = windowWidth / 1800;
     const h = g.height / 900
-    const windowSize = g.width / g.height
+    // const windowSize = g.width / g.height
     const shadowColor = `rgba(${this.colorPicker(g, configInput.logo.color[0])},${this.colorPicker(g, configInput.logo.color[1])},${this.colorPicker(g, configInput.logo.color[2])},${.5})`
 
     //LOGO SHADOW

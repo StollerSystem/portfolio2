@@ -1,9 +1,9 @@
 export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
 
-  // var windowWidth = windowWidth;
-  var size = 30 * (windowWidth / 1800);
-  var padding = 10 * (windowWidth / 1800);
-  var r = 9 * (windowWidth / 1800);
+  var window = windowWidth / 1800;  
+  var size = 30 * (window);
+  var padding = 10 * (window);
+  var r = 9 * (window);
 
   var digitMaps = [
     [true, true, true, false, true, true, true], //0
@@ -22,17 +22,17 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
   this.render = function (state) {
     var scoreString = "" + state.score;
     var x = 75 * (windowWidth / 1800) - (scoreString.length * (size + padding) / 3);
-    var digitPos = g.createVector(x, padding);    
+    var digitPos = g.createVector(x, padding);
 
-    drawLives(state);    
+    drawLives(state);
 
-    if (state.lives < 0) {      
+    if (state.lives < 4) {
 
       g.push();
       g.textFont('Montserrat')
       g.textAlign(g.CENTER)
-      g.textSize(150 * (windowWidth / 1800));
-      g.fill(255)      
+      g.textSize(150 * (window));
+      g.fill(255)
       g.stroke(255)
       g.strokeWeight(g.random(1, 3))
       g.text("GAME OVER", (g.width / 2), g.height / 2);
@@ -40,25 +40,25 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
 
       g.push();
       g.textFont('Montserrat')
-      g.textSize(50 * (windowWidth / 1800));
+      g.textSize(50 * (window));
       g.fill(255)
-      g.textAlign(g.CENTER)      
+      g.textAlign(g.CENTER)
       g.stroke(255)
       g.strokeWeight(g.random(0, 2))
-      g.text("FINAL SCORE", (windowWidth/2), g.height / 1.75);
+      g.text("FINAL SCORE", (g.width / 2), g.height / 1.75);
       g.pop();
 
       g.push();
       g.textFont('Montserrat')
-      g.textSize(30 * (windowWidth / 1800));
+      g.textSize(30 * (window));
       g.fill(255)
-      g.textAlign(g.CENTER)      
+      g.textAlign(g.CENTER)
       g.stroke(255)
       g.strokeWeight(g.random(0, 2))
-      g.text("PRESS <ENTER>", (windowWidth/2), g.height / 1.1);
+      g.text("PRESS <ENTER>", (g.width / 2), g.height / 1.1);
       g.pop();
 
-      let x = windowWidth / 2 - ((padding)*scoreString.length);
+      let x = g.width / 2 - ((padding) * scoreString.length);
       let y = g.height / 1.55 - (size * 1.55);
       let digitPos = g.createVector(x, y);
       for (var i = 0; i < scoreString.length; i++) {
@@ -73,7 +73,7 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
         drawDigit(dmap, i, digitPos);
         digitPos.x += size + padding;
       }
-    }    
+    }
   }
 
   function drawLives(state) {
@@ -81,14 +81,14 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
     g.stroke(`rgba(${rgbColor3[0]},${rgbColor3[1]},${rgbColor3[2]},1)`);
     g.strokeWeight(g.random(1, 1.5))
     g.fill(0);
-    g.translate(g.width - 150 * (windowWidth / 1800), 20 * (windowWidth / 1800))
+    g.translate(g.width - 150 * (window), 20 * (window))
     for (var i = 0; i < state.lives; i++) {
-      g.translate(38 * (windowWidth / 1800), 0)
+      g.translate(38 * (window), 0)
       g.curve(
         -1, 20,
         0 - 10, -r / 3,
         r - 10, -r / 8,
-        r * 2, 30 * (windowWidth / 1800),
+        r * 2, 30 * (window),
       )
       g.beginShape()
       g.vertex(-r - 10, r / 2)
@@ -105,7 +105,7 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
   }
 
   function drawLaserCharge(state) {
-    let w = windowWidth / 1800
+    let w = window
     let barColor;
     let borderColor = state.laserOverHeat ? 'rgba(255,0,0,.5)' : state.laserCharge > 1275 ? 'rgba(0,0,255,.9)' : 'rgba(255,255,255,.5)';
     let maxBorderWeight = state.laserCharge > 1275 ? 7 : 2;
@@ -130,11 +130,11 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
       g.push();
       g.textFont('Lexend Mega');
       g.textAlign(g.CENTER);
-      g.textSize(15 * (windowWidth / 1800));
+      g.textSize(15 * (window));
       g.stroke('rgba(255,0,0,.5)')
-      g.strokeWeight(g.random(1, 4 * (windowWidth / 1800)))
+      g.strokeWeight(g.random(1, 4 * (window)))
       g.fill(255, 0, 0)
-      g.text("OVER HEAT", (g.width / 2), 60 * (windowWidth / 1800));
+      g.text("OVER HEAT", (g.width / 2), 60 * (window));
       g.pop();
     }
   }
@@ -142,7 +142,7 @@ export default function Hud(g, rgbColor1, rgbColor3, windowWidth) {
   function drawDigit(digitMap, index, pos) {
     g.push();
     g.stroke(`rgba(${rgbColor1[0]},${rgbColor1[1]},${rgbColor1[2]},1)`);
-    g.strokeWeight(g.random(2.5 * (windowWidth / 1800), 3.5 * (windowWidth / 1800)))
+    g.strokeWeight(g.random(2.5 * (window), 3.5 * (window)))
     for (var i = 0; i < digitMap.length; i++) {
       if (digitMap[i] === true)
         drawLine(i, pos);

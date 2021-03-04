@@ -30,7 +30,7 @@ export const resetCanvas = (state, g, canvas) => {
   canvas.parent("game");
   state.ctx = canvas.elt.getContext("2d");
 
-  console.log("w:" + g.width + " h:" + g.height)
+  // console.log("w:" + g.width + " h:" + g.height)
 
   // SET UP MOBILE BUTTONS
   state.buttons[0] = new MobileButton(g, 0, g.UP_ARROW, 38, 120, g.height - 120)

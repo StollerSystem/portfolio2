@@ -2,7 +2,7 @@ import * as p5 from 'p5';
 
 export default function laserCollision(state, g, i, addDust, addDebris, roundLoss, input, addToScore, spawnPowerUp, addPointNumbers) {
   const points = [200, 100, 50, 25];
-  var g = g;
+  // var g = g;
   var exists = true;
   var w = state.windowWidth / 1800;
   for (var j = state.asteroids.length - 1; j >= 0; j--) {
@@ -58,8 +58,8 @@ export default function laserCollision(state, g, i, addDust, addDebris, roundLos
 
   // VS BARRIERS
   if (exists) {
-    for (var k = state.barriers.length - 1; k >= 0; k--) {
-      for (var j = state.barriers[k].length - 1; j >= 0; j--) {
+    for (let k = state.barriers.length - 1; k >= 0; k--) {
+      for (let j = state.barriers[k].length - 1; j >= 0; j--) {
         if (exists && state.lasers[i].hits(state.barriers[k][j])) {
           exists = false;
           // IF POWER SQUARE SPAWN POWERUP
@@ -67,7 +67,7 @@ export default function laserCollision(state, g, i, addDust, addDebris, roundLos
             spawnPowerUp(state, g, state.barriers[k][j].pos)
           }
           let laserVel = state.lasers[i].vel.copy();
-          let dustVel = p5.Vector.add(laserVel.mult(0.05),state. barriers[k][j].vel);
+          let dustVel = p5.Vector.add(laserVel.mult(0.05),state.barriers[k][j].vel);
           addDust(state, state.barriers[k][j].pos, dustVel, 5, .02, state.rgbColor2, 3, g);
 
           if (!state.lasers[i].enemy) {
@@ -99,7 +99,7 @@ export default function laserCollision(state, g, i, addDust, addDebris, roundLos
     if (state.lasers[i].hits(state.ship) && state.lasers[i].enemy && state.canPlay) {
       state.canPlay = false;
       exists = false;
-      var dustVel = p5.Vector.add(state.ship.vel.mult(0.2), state.lasers[i].vel.mult(.2));
+      let dustVel = p5.Vector.add(state.ship.vel.mult(0.2), state.lasers[i].vel.mult(.2));
       state.lasers.splice(i, 1);
       addDust(state, state.ship.pos, dustVel, 15, .005, state.rgbColor3, 2.5, g);
       state.ship.destroy();
@@ -110,8 +110,8 @@ export default function laserCollision(state, g, i, addDust, addDebris, roundLos
 
   // VS BOSS ARMOR
   if (exists) {
-    for (var k = state.bosses.length - 1; k >= 0; k--) {
-      if (state.lasers[i].hits(state.bosses[k].quad1) && !state.lasers[i].enemy || state.lasers[i].hits(state.bosses[k].quad2) && !state.lasers[i].enemy ||state. lasers[i].hits(state.bosses[k].quad3) && !state.lasers[i].enemy || state.lasers[i].hits(state.bosses[k].quad4) && !state.lasers[i].enemy) {
+    for (let k = state.bosses.length - 1; k >= 0; k--) {
+      if ((state.lasers[i].hits(state.bosses[k].quad1) && !state.lasers[i].enemy) || (state.lasers[i].hits(state.bosses[k].quad2) && !state.lasers[i].enemy) || (state.lasers[i].hits(state.bosses[k].quad3) && !state.lasers[i].enemy) || (state.lasers[i].hits(state.bosses[k].quad4) && !state.lasers[i].enemy)) {
         exists = false;
         let laserVel = state.lasers[i].vel.copy();
         let dustVel = p5.Vector.add(laserVel.mult(0.01), state.bosses[k].vel);
@@ -123,7 +123,7 @@ export default function laserCollision(state, g, i, addDust, addDebris, roundLos
 
   // VS BOSS CORE
   if (exists) {
-    for (var k = state.bosses.length - 1; k >= 0; k--) {
+    for (let k = state.bosses.length - 1; k >= 0; k--) {
       if (state.lasers[i].hits(state.bosses[k].core) && !state.lasers[i].enemy && !state.bosses[k].destroyed) {
         exists = false;
         let laserVel = state.lasers[i].vel.copy();
