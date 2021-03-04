@@ -5,14 +5,14 @@ import { Link as Scroll } from 'react-scroll';
 export default function About() {
   return (
     <>
-      <div className='about'>
+      {/* <div className='about'>
         <h1>ABOUT</h1>
         <div className='projects-btns'>
           <Scroll to='about-me' smooth='true'>
             <i className="fas fa-chevron-down fa-3x"></i>
           </Scroll>
         </div>
-      </div>
+      </div> */}
       <div className='about-me'>
         <img src="/images/stoller_pic_berlin.jpg" alt='stoller_berlin' className='about-me-img' />
         <div className='about-me-text'>
