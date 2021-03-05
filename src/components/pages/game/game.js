@@ -16,7 +16,7 @@ export const callGame = () => {
   var config = gameConfig.default
   var logoPath = new Path2D(config.logo.path);
 
-  const game = (g) => {
+  const game = (g) => {    
    
     g.preload = () => {
       let random_Colors = randomColors(g);
@@ -85,10 +85,10 @@ export const callGame = () => {
 
         g.background(0);
 
-        // let fps = g.frameRate();
-        // g.fill(255);
-        // g.stroke(0);
-        // g.text("FPS: " + fps.toFixed(2), 10, g.height - 10);
+        let fps = g.frameRate();
+        g.fill(255);
+        g.stroke(0);
+        g.text("FPS: " + fps.toFixed(2), 10, g.height - 10);
 
         for (let i = 0; i < state.barriers.length; i++) {
           render(state.barriers[i])

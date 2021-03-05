@@ -11,15 +11,25 @@ export default function Projects() {
   //   callGame();
   // }
 
-  useEffect(() => {    
-    callGame();
+  useEffect(() => {
+    var canvas = document.getElementById("defaultCanvas0");
+    // console.log(canvas)
+    if (!canvas) {
+      callGame();
+    } 
+    // return () => {
+    //   console.log("unmount")
+    //   if (canvas) {
+    //     canvas.remove();
+    //   }
+    // }
   });
 
   return (
     <>
-    <div className="game-container" id="game">
+      <div className="game-container" id="game" />
 
-    </div>
+
       {/* <div className='projects'>
         <h1 >PROJECTS</h1>
         <div className='projects-btns'>
