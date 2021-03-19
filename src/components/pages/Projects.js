@@ -12,17 +12,20 @@ export default function Projects() {
   // }
 
   useEffect(() => {
+    
     var canvas = document.getElementById("defaultCanvas0");
     // console.log(canvas)
     if (!canvas) {
+      
       callGame();
     } 
-    // return () => {
-    //   console.log("unmount")
-    //   if (canvas) {
-    //     canvas.remove();
-    //   }
-    // }
+    return () => {
+      window.location.reload(false);
+      console.log("unmount")
+      // if (canvas) {
+      //   canvas.remove();
+      // }
+    }
   });
 
   return (

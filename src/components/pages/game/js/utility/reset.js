@@ -7,7 +7,7 @@ import { input } from './input.js'
 
 export const resetCanvas = (state, g, canvas) => {
 
-  console.log("game reset")
+  // console.log("game reset")
 
   state.canvas = null;
   state.ctx = null;
@@ -99,5 +99,5 @@ export const resetCanvas = (state, g, canvas) => {
     }, 100)
   });
 
-  console.log(state)
+  // console.log(state)
 }

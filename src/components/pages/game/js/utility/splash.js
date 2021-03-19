@@ -104,7 +104,7 @@ export default function Splash() {
     g.textAlign(g.CENTER)
     g.textSize(35 * w)
     g.textFont('Montserrat')
-    g.text('PRESS <ENTER> TO START', centerX, centerY + (g.height/8))
+    g.text('CLICK TO START', centerX, centerY + (g.height/8))
     g.pop()
 
     // CONTROLS
