@@ -38,6 +38,10 @@ export const callGame = () => {
       }      
     }
 
+    g.windowResized = () => {
+      g.resizeCanvas(state.windowWidth * .9, g.windowHeight * .70)
+    }
+
     g.draw = () => {
 
       if (state.fullReset) {

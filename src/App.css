@@ -178,7 +178,7 @@ canvas {
 
 #game {
   display: flex;
-  height: 75vh;
+  height: 74vh;
   width: 100%;
   align-items: center;
   flex-direction: column;
