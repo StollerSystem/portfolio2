@@ -4,33 +4,45 @@ import './Cards.css';
 import { Button } from './Button';
 
 function CardItem(props) {
+
+  let live = null;
+  let pictureLink = <a target='_blank' rel="noreferrer" href={props.repo}>
+    <img src={props.src} alt='Project' className='cards__item__img' />
+  </a>
+
+  if (props.live) {
+    live = <a target='_blank' rel="noreferrer" href={props.live}>
+      <Button
+        className='btns'
+        buttonStyle='btn--outline'
+        buttonSize='btn--large'>
+        LIVE
+    </Button>
+    </a>
+
+    pictureLink = <a target='_blank' rel="noreferrer" href={props.live}>
+      <img src={props.src} alt='Project' className='cards__item__img' />
+    </a>
+  }
+
   return (
     <>
       <li className='cards__item'>
         <div className='cards__item__link' >
           <figure className='cards__item__pic-wrap' data-category={props.label}>
-            <a target='_blank'  rel="noreferrer"  href={props.live}>
-              <img src={props.src} alt='Project' className='cards__item__img' />
-            </a>
+            {pictureLink}
           </figure>
           <div className='cards__item__info'>
             <h5 className='cards__item__text'>{props.text}</h5>
           </div>
           <div className='cards__item__buttons'>
-            <a target='_blank'  rel="noreferrer" href={props.live}>
+            {live}
+            <a target='_blank' rel="noreferrer" href={props.repo}>
               <Button
-              className='btns'
-              buttonStyle='btn--outline'
-              buttonSize='btn--large'>
-              LIVE
-              </Button>
-            </a>
-            <a target='_blank'  rel="noreferrer" href={props.repo}>
-              <Button
-              className='btns'
-              buttonStyle='btn--outline'
-              buttonSize='btn--large'>
-              REPO
+                className='btns'
+                buttonStyle='btn--outline'
+                buttonSize='btn--large'>
+                REPO
               </Button>
             </a>
           </div>
