@@ -21,7 +21,7 @@ export default function Projects() {
     } 
     return () => {
       window.location.reload(false);
-      console.log("unmount")
+      // console.log("unmount")
       // if (canvas) {
       //   canvas.remove();
       // }
