@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 import './Navbar.css';
 // import { Button } from './Button';
 import * as Scroll from 'react-scroll';
-// import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 function Navbar() {
@@ -13,8 +14,11 @@ function Navbar() {
   const [click, setClick] = useState(false);
   // const [button, setButton] = useState(true);
 
+  const location = useLocation();
+
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => {
+
     setClick(false);
     scroll.scrollToTop({ smooth: false, duration: 0 });
   }
@@ -32,6 +36,24 @@ function Navbar() {
 
   // window.addEventListener('resize', showButton);
 
+  let project = <li className='nav-item'>
+    {/* <ScrollLink to='cards' smooth='true'> */}
+    <Link to="/" className='nav-links' onClick={closeMobileMenu}>
+      Projects
+    </Link>
+    {/* </ScrollLink> */}
+  </li>
+
+  if (location.pathname === "/") {    
+    project = <li className='nav-item'>
+    <ScrollLink to='cards' smooth='true' className='nav-links'>
+    {/* <Link to="/" className='nav-links' onClick={closeMobileMenu}> */}
+      Projects
+    {/* </Link> */}
+    </ScrollLink>
+  </li>
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -43,13 +65,7 @@ function Navbar() {
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              {/* <ScrollLink to='cards' smooth='true'> */}
-                <Link to="/" className='nav-links' onClick={closeMobileMenu}>
-                  Projects
-                </Link>
-              {/* </ScrollLink> */}
-            </li>
+            {project}
             {/* <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
